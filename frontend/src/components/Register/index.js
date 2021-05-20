@@ -19,6 +19,7 @@ function Register(props) {
     email: '',
     password: '',
     confirmPassword: '',
+    pictureURL: 'http://'
   });
 
   const [addUser, { loading }] = useMutation(REGISTER_USER, {

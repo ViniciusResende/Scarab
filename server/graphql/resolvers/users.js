@@ -51,6 +51,10 @@ module.exports = {
       if(!valid){
         throw new UserInputError('Errors', { errors });
       }
+
+      if(pictureURL.trim() === ''){
+        pictureURL = 'http://';
+      }
       //Make sure user doesnt already exist
       const user = await User.findOne({ username });
       if(user){
